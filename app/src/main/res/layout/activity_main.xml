@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="abe.appsfactory.nanodegree.bakingapp.presenter.MainPresenter"/>
+    </data>
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="abe.appsfactory.nanodegree.popular_movies.ui.activities.MainActivity">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recipe_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/std_margin"
+            android:layout_marginStart="@dimen/std_margin"
+            android:clipToPadding="false"
+            android:paddingEnd="8dp"
+            android:paddingStart="0dp"
+            android:paddingTop="?android:attr/actionBarSize"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#7000"
+            android:clickable="true"
+            android:visibility="@{presenter.mLoadingVisibility}">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Baking Time"/>
+    </FrameLayout>
+</layout>
+

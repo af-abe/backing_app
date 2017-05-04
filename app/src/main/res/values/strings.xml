@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Baking App</string>
+    <string name="next"><![CDATA[next ->]]></string>
+    <string name="previous"><![CDATA[<- previous]]></string>
+</resources>
